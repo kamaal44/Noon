@@ -10,8 +10,7 @@
  [!] This tool is meant for research purposes only,
    and any malicious usage of this tool is prohibited.
 
- [!] For the script to properly run, you must have Kali Linux installed,
-   or any other Debian based distro with Kali repositories added.
+ [!] For the script to properly run, you must have Kali Linux, Fedora, Or Ubuntu installed on your system using Python 3.6..
 
  [!] This software is distributed under the GNU General Public License Version 3 (GPLv3).
    
