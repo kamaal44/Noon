@@ -1,6 +1,6 @@
         .                 .
       .´  ·  .       .  ·  `.   [!] Noon - Version 0.1.
-      :  :  :   (¯)   :  :  :   [!] Author - darkyy.
+      :  :  :   (¯)   :  :  :   [!] Author - cristi092.
       `.  ·  `  /¯\  ´  ·  .´   [!] Multi-Use Wireless Auditor.
         `      /¯¯¯\     ´
 
